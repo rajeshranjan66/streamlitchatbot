@@ -1,7 +1,7 @@
 import streamlit as st
 from langchain_openai.chat_models import ChatOpenAI
 
-st.title("🦜🔗 Basic chatbot")
+st.title("Basic chatbot")
 
 openai_api_key = st.sidebar.text_input("OpenAI API Key", type="password")
 
