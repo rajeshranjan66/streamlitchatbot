@@ -1,7 +1,7 @@
 import streamlit as st
 from langchain_openai.chat_models import ChatOpenAI
 
-st.title("Basic chatbot")
+st.title("Basic chatbot with OpenAI")
 
 openai_api_key = st.sidebar.text_input("OpenAI API Key", type="password")
 
@@ -13,8 +13,8 @@ def generate_response(input_text):
 
 with st.form("my_form"):
     text = st.text_area(
-        "Enter text:",
-        "What are the three key pieces of advice for learning how to code?",
+        "Ask anything....",
+        "",
     )
     submitted = st.form_submit_button("Submit")
     if not openai_api_key.startswith("sk-"):
